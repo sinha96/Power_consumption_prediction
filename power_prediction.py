@@ -33,10 +33,11 @@ print(daily_data.shape)
 print(daily_data.head())
 # save
 daily_data.to_csv('household_power_consumption_days.csv')
+
 from numpy import split
 import numpy as np
 from numpy import array
-from pandas import read_csv
+
 
 # split a univariate dataset into train/test sets
 def split_dataset(data):
@@ -72,9 +73,6 @@ print(test.shape)
 
 
 from math import sqrt
-from numpy import split
-from numpy import array
-from pandas import read_csv
 from sklearn.metrics import mean_squared_error
 from matplotlib import pyplot
 from keras.models import Sequential
