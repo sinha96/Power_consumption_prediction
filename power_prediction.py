@@ -10,6 +10,16 @@ from numpy import nan
 from numpy import isnan
 from pandas import read_csv
 from pandas import to_numeric
+from numpy import split
+import numpy as np
+from numpy import array
+from math import sqrt
+from sklearn.metrics import mean_squared_error
+from matplotlib import pyplot
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Flatten
+from keras.layers import LSTM
 
 # fill missing values with a value at the same time one day ago
 def fill_missing(values):
@@ -33,10 +43,6 @@ print(daily_data.shape)
 print(daily_data.head())
 # save
 daily_data.to_csv('household_power_consumption_days.csv')
-
-from numpy import split
-import numpy as np
-from numpy import array
 
 
 # split a univariate dataset into train/test sets
@@ -67,18 +73,6 @@ print(train.shape)
 test = np.asarray(test)
 print(test.shape)
 
-
-
-
-
-
-from math import sqrt
-from sklearn.metrics import mean_squared_error
-from matplotlib import pyplot
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import Flatten
-from keras.layers import LSTM
 
 # split a univariate dataset into train/test sets
 def split_dataset(data):
